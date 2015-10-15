@@ -27,7 +27,7 @@ App.Forms = App.Forms || {};
         type: 'Password',
         title: 'Confirm password',
         validators: [
-          'required'
+          'required',
           {
             type: 'match',
             field: 'password',

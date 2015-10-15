@@ -8,7 +8,7 @@ var mountFolder = function(connect, dir) {
 
 // # Globbing
 // for performance reasons we're only matching one level down:
-// 'test/spec/{,*/}*.js'
+// 'test/spec/**/*.js'
 // use this if you want to match all subfolders:
 // 'test/spec/**/*.js'
 // templateFramework: 'lodash'
@@ -34,7 +34,7 @@ module.exports = function(grunt) {
       },
       sass: {
         files: [
-          '<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'
+          '<%= yeoman.app %>/styles/**/*.{scss,sass}'
         ],
         tasks: [
           'sass:server'
@@ -46,9 +46,9 @@ module.exports = function(grunt) {
         },
         files: [
           '<%= yeoman.app %>/*.html',
-          '{.tmp,<%= yeoman.app %>}/styles/{,*/}*.css',
-          '{.tmp,<%= yeoman.app %>}/scripts/{,*/}*.js',
-          '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp}',
+          '{.tmp,<%= yeoman.app %>}/styles/**/*.css',
+          '{.tmp,<%= yeoman.app %>}/scripts/**/*.js',
+          '<%= yeoman.app %>/images/**/*.{png,jpg,jpeg,gif,webp}',
           '<%= yeoman.app %>/scripts/templates/*.{ejs,mustache,hbs}',
           'test/spec/**/*.js'
         ]
@@ -63,7 +63,7 @@ module.exports = function(grunt) {
       },
       test: {
         files: [
-          '<%= yeoman.app %>/scripts/{,*/}*.js',
+          '<%= yeoman.app %>/scripts/**/*.js',
           'test/spec/**/*.js'
         ],
         tasks: [
@@ -133,9 +133,9 @@ module.exports = function(grunt) {
       },
       all: [
         'Gruntfile.js',
-        '<%= yeoman.app %>/scripts/{,*/}*.js',
+        '<%= yeoman.app %>/scripts/**/*.js',
         '!<%= yeoman.app %>/scripts/vendor/*',
-        'test/spec/{,*/}*.js'
+        'test/spec/**/*.js'
       ]
     },
     mocha: {
@@ -182,12 +182,6 @@ module.exports = function(grunt) {
         ]
       }
     },
-    // not enabled since usemin task does concat and uglify
-    // check index.html to edit your build targets
-    // enable this task if you prefer defining your build targets here
-    /*uglify: {
-      dist: {}
-    },*/
     useminPrepare: {
       html: '<%= yeoman.app %>/index.html',
       options: {
@@ -196,10 +190,10 @@ module.exports = function(grunt) {
     },
     usemin: {
       html: [
-        '<%= yeoman.dist %>/{,*/}*.html'
+        '<%= yeoman.dist %>/**/*.html'
       ],
       css: [
-        '<%= yeoman.dist %>/styles/{,*/}*.css'
+        '<%= yeoman.dist %>/styles/**/*.css'
       ],
       options: {
         dirs: [
@@ -213,7 +207,7 @@ module.exports = function(grunt) {
           {
             expand: true,
             cwd: '<%= yeoman.app %>/images',
-            src: '{,*/}*.{png,jpg,jpeg}',
+            src: '**/*.{png,jpg,jpeg}',
             dest: '<%= yeoman.dist %>/images'
           }
         ]
@@ -223,8 +217,8 @@ module.exports = function(grunt) {
       dist: {
         files: {
           '<%= yeoman.dist %>/styles/main.css': [
-            '.tmp/styles/{,*/}*.css',
-            '<%= yeoman.app %>/styles/{,*/}*.css'
+            '.tmp/styles/**/*.css',
+            '<%= yeoman.app %>/styles/**/*.css'
           ]
         }
       }
@@ -273,8 +267,8 @@ module.exports = function(grunt) {
             dest: '<%= yeoman.dist %>',
             src: [
               '*.{ico,txt}',
-              'images/{,*/}*.{webp,gif}',
-              'styles/fonts/{,*/}*.*',
+              'images/**/*.{webp,gif}',
+              'styles/fonts/**/*.*',
               'bower_components/bootstrap-sass/assets/fonts/bootstrap/*.*'
             ]
           },
@@ -289,10 +283,10 @@ module.exports = function(grunt) {
       dist: {
         files: {
           src: [
-            '<%= yeoman.dist %>/scripts/{,*/}*.js',
-            '<%= yeoman.dist %>/styles/{,*/}*.css',
-            '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp}',
-            '/styles/fonts/{,*/}*.*',
+            '<%= yeoman.dist %>/scripts/**/*.js',
+            '<%= yeoman.dist %>/styles/**/*.css',
+            '<%= yeoman.dist %>/images/**/*.{png,jpg,jpeg,gif,webp}',
+            '/styles/fonts/**/*.*',
             'bower_components/bootstrap-sass/assets/fonts/bootstrap/*.*'
           ]
         }

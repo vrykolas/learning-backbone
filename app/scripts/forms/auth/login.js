@@ -32,6 +32,7 @@ App.Forms = App.Forms || {};
           }
         ]
       }
-    }
+    },
+    submitButton: 'Login'
   });
 })();
