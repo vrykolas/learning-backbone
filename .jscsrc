@@ -1,0 +1,56 @@
+{
+  "disallowEmptyBlocks": true,
+  "disallowMixedSpacesAndTabs": true,
+  "disallowMultipleLineBreaks": true,
+  "disallowMultipleSpaces": true,
+  "disallowMultipleVarDecl": true,
+  "disallowSpaceAfterObjectKeys": true,
+  "disallowSpaceBeforeSemicolon": true,
+  "disallowSpacesInCallExpression": true,
+  "disallowSpacesInFunction": {
+    "beforeOpeningRoundBrace": true
+  },
+  "disallowSpacesInsideBrackets": true,
+  "disallowSpacesInsideParentheses": true,
+  "disallowTabs": true,
+  "disallowTrailingComma": true,
+  "disallowTrailingWhitespace": true,
+  "disallowUnusedParams": true,
+  "excludeFiles": [
+    "app/bower_components/**",
+    "app/scripts/templates/**",
+    "app/scripts/vendor/**",
+    "app/index.html"
+  ],
+  "requireBlocksOnNewline": true,
+  "requireCommaBeforeLineBreak": true,
+  "requireCurlyBraces": [
+    "catch",
+    "default",
+    "do",
+    "else",
+    "for",
+    "if",
+    "switch",
+    "try",
+    "while"
+  ],
+  "requireLineFeedAtFileEnd": true,
+  "requireSemicolons": true,
+  "requireSpacesInsideObjectBrackets": "all",
+  "requireSpaceBeforeBlockStatements": true,
+  "requireSpaceBetweenArguments": true,
+  "requireSpacesInForStatement": true,
+  "requireSpacesInFunction": {
+    "beforeOpeningCurlyBrace": true
+  },
+  "validateIndentation": {
+    "includeEmptyLines": false,
+    "value": 2
+  },
+  "validateParameterSeparator": ", ",
+  "validateQuoteMarks": {
+    "escape": true,
+    "mark": "'"
+  }
+}
