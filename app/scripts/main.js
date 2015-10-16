@@ -9,7 +9,7 @@ Backbone.View.prototype.close = function() {
   }
 
   this.remove();
-  this.unbind();
+  this.off();
 
   if(this.onClose) {
     this.onClose();
